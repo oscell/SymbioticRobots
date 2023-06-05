@@ -1,11 +1,59 @@
-sudo apt update && upgrade -y
-sudo apt-get install wget gpg
-wget -qO- https://packages.microsoft.com/keys/microsoft.asc | gpg --dearmor > packages.microsoft.gpg
-sudo install -D -o root -g root -m 644 packages.microsoft.gpg /etc/apt/keyrings/packages.microsoft.gpg
-sudo sh -c 'echo "deb [arch=amd64,arm64,armhf signed-by=/etc/apt/keyrings/packages.microsoft.gpg] https://packages.microsoft.com/repos/code stable main" > /etc/apt/sources.list.d/vscode.list'
-rm -f packages.microsoft.gpg
+#!/bin/bash
 
-sudo apt install apt-transport-https
-sudo apt update
-sudo apt install code
+echo -e "\e[41mUpdating packages...\e[0m"
+sudo apt update -y
+
+echo -e "\e[41mUpgrading packages...\e[0m"
+sudo apt upgrade -y
+
+echo -e "\e[41mInstalling necessary packages...\e[0m"
+sudo apt-get install -y wget gnupg apt-transport-https
+
+if ! command -v code &> /dev/null
+then
+  echo -e "\e[41mDownloading Microsoft's GPG key...\e[0m"
+  wget -qO- https://packages.microsoft.com/keys/microsoft.asc | gpg --dearmor > packages.microsoft.gpg
+
+  echo -e "\e[41mInstalling the GPG key...\e[0m"
+  sudo install -o root -g root -m 644 packages.microsoft.gpg /etc/apt/trusted.gpg.d/
+
+  echo -e "\e[41mAdding Visual Studio Code's repository to sources.list...\e[0m"
+  echo "deb [arch=amd64,arm64,armhf] https://packages.microsoft.com/repos/code stable main" | sudo tee /etc/apt/sources.list.d/vscode.list
+
+  echo -e "\e[41mRemoving the downloaded GPG key...\e[0m"
+  rm -f packages.microsoft.gpg
+
+  echo -e "\e[41mUpdating packages again...\e[0m"
+  sudo apt update -y
+
+  echo -e "\e[41mInstalling Visual Studio Code...\e[0m"
+  sudo apt install -y code
+fi
+
+if ! command -v chromium-browser &> /dev/null
+then
+  echo -e "\e[41mInstalling Chromium...\e[0m"
+  sudo apt-get update -y
+  sudo apt-get install -y chromium-browser
+fi
+
+
+echo -e "\e[41mInstalling ROS Kinetic...\e[0m"
+sudo sh -c 'echo "deb http://packages.ros.org/ros/ubuntu $(lsb_release -sc) main" > /etc/apt/sources.list.d/ros-latest.list'
+
+sudo apt install curl -y # if you haven't already installed curl
+curl -s https://raw.githubusercontent.com/ros/rosdistro/master/ros.asc | sudo apt-key add -
+
+sudo apt-get update -y
+sudo apt-get install ros-kinetic-desktop-full -y
+
+echo "source /opt/ros/kinetic/setup.bash" >> ~/.bashrc
+source ~/.bashrc
+
+sudo apt install python-rosdep python-rosinstall python-rosinstall-generator python-wstool build-essential -y
+
+sudo apt install python-rosdep -y
+
+sudo rosdep init
+rosdep update
 
