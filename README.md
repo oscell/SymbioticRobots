@@ -1,7 +1,4 @@
 # SymbioticRobots
-
-Install [Docker](https://docs.docker.com/desktop/install/ubuntu/)
-
 ```
 sudo apt install git-all -y
 ```
