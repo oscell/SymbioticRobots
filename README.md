@@ -1,5 +1,9 @@
 # SymbioticRobots
 
+```
+sudo apt install git-all -y
+```
+
 ```bash
 git clone https://github.com/oscell/SymbioticRobots.git
 cd SymbioticRobots
