@@ -60,3 +60,5 @@ rosdep update
 echo -e "\e[41mInstalling Jackal stuff...\e[0m"
 sudo apt-get install ros-kinetic-jackal-simulator ros-kinetic-jackal-desktop ros-kinetic-jackal-navigation -y
 
+git config --global user.name "oscell"
+git config --global user.email "oscar.meunierpbs@gmail.com"
