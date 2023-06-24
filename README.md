@@ -31,7 +31,7 @@ roslaunch jackal_viz view_robot.launch config:=gmapping
 ```
 
 ```bash
-cd ~/Desktop/Github/SymbioticRobots/assets/
+cd ../assets
 rosrun testing map_maker.py
 ```
 
