@@ -5,8 +5,7 @@
 ### Steps
 
 ```bash
-cd SymbioticRobots
-
+cd Jackal_ws
 ```
 
 ```bash
