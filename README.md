@@ -9,8 +9,7 @@ Open Robotics/ROS Settings from the Unity menu bar, and set the ROS IP Address v
 ### SimulationSteps
 
 ```bash
-cd SymbioticRobots
-
+cd SymbioticRobots/Jackal_ws
 ```
 
 ```bash
