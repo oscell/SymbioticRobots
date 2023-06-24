@@ -38,7 +38,7 @@ rosrun testing map_maker.py
 ************************Save the map************************
 
 ```bash
-cd ~/Desktop/Github/SymbioticRobots/assets
+cd ~/Desktop/SymbioticRobots/assets
 rosrun map_server map_saver -f mymap1
 ```
 
