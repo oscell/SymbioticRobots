@@ -1,11 +1,16 @@
 # SymbioticRobots
 
-**LAUNCH GAZEBO**
+```bash
+ros2 run ros_tcp_endpoint default_server_endpoint --ros-args -p ROS_IP:=127.0.0.1 -p ROS_TCP_PORT:=10000
+```
 
-### Steps
+Open Robotics/ROS Settings from the Unity menu bar, and set the ROS IP Address variable to the IP you set
+
+### SimulationSteps
 
 ```bash
-cd Jackal_ws
+cd SymbioticRobots
+
 ```
 
 ```bash
@@ -13,7 +18,7 @@ catkin_make
 ```
 
 ```bash
-source devel/setup.bash
+source Jackal_ws/devel/setup.bash
 ```
 
 Launch rviz
@@ -31,14 +36,14 @@ roslaunch jackal_viz view_robot.launch config:=gmapping
 ```
 
 ```bash
-cd ../assets
+cd ~/Desktop/Github/SymbioticRobots/assets/
 rosrun testing map_maker.py
 ```
 
 ************************Save the map************************
 
 ```bash
-cd ~/Desktop/SymbioticRobots/assets
+cd ~/Desktop/Github/SymbioticRobots/assets
 rosrun map_server map_saver -f mymap1
 ```
 
@@ -84,6 +89,27 @@ To [Install Unity](https://unity.com/download) we will first install [Unity Hub]
 We will install Unity 2020.3.2f1, although it is not explicitly mentioned, it [can work on Ubuntu 16.04](https://docs.unity3d.com/2020.1/Documentation/Manual/system-requirements.html).
 
 Once logged into Unity Hub open `Install editor > 2020.3.48f1 LTS.`
+
+
+### Installing the Unity Robotics packages
+
+This page provides brief instructions on installing the Unity Robotics packages. Head over to the [Pick-and-Place Tutorial](https://github.com/Unity-Technologies/Unity-Robotics-Hub/blob/main/tutorials/pick_and_place/README.md) for more detailed instructions and steps for building a sample project.
+
+1. Create or open a Unity project.
+    
+    > Note: If you are adding the URDF-Importer, ensure you are using a 2020.2.0+ version of Unity Editor.
+    > 
+2. Open `Window` -> `Package Manager`.
+3. In the Package Manager window, find and click the `+` button in the upper lefthand corner of the window. Select `Add package from git URL...`.
+    
+    ![package manager](https://github.com/Unity-Technologies/Unity-Robotics-Hub/raw/main/images/packman.png)
+    
+4. Enter the git URL for the desired package. Note: you can append a version tag to the end of the git url, like `#v0.4.0` or `#v0.5.0`, to declare a specific package version, or exclude the tag to get the latest from the package's `main` branch.
+    1. For the [ROS-TCP-Connector](https://github.com/Unity-Technologies/ROS-TCP-Connector), enter `https://github.com/Unity-Technologies/ROS-TCP-Connector.git?path=/com.unity.robotics.ros-tcp-connector`.
+    2. For the [URDF-Importer](https://github.com/Unity-Technologies/URDF-Importer), enter `https://github.com/Unity-Technologies/URDF-Importer.git?path=/com.unity.robotics.urdf-importer`.
+5. Click `Add`.
+
+To install from a local clone of the repository, see [installing a local package](https://docs.unity3d.com/Manual/upm-ui-local.html) in the Unity manual.
 
 
 ## Linux setup Installation

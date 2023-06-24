@@ -1,7 +1,7 @@
 from PIL import Image
 
 # Open the .pgm file
-img = Image.open('../assets/mymap1.pgm')
+img = Image.open('../assets/full_map.pgm')
 
 # Convert and save as .jpg
-img.save('../assets/mymap1.png')
+img.save('../assets/full_map.png')
