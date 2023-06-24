@@ -15,14 +15,34 @@ chmod +x requirements.txt
 
 **LAUNCH GAZEBO**
 
+### Steps
+
+Launch rviz
+
 ```bash
-roslaunch jackal_gazebo jackal_world.launch
-```
-
-You can also launch it with specific configs:
-
-```
 roslaunch jackal_gazebo jackal_world.launch config:=front_laser
+```
+
+```bash
+roslaunch jackal_navigation gmapping_demo.launch
+```
+
+```bash
+roslaunch jackal_viz view_robot.launch config:**=**gmapping
+```
+
+************************Save the map************************
+
+```bash
+cd ~/Desktop/Github/SymbioticRobots/assets
+rosrun map_server map_saver -f mymap1
+```
+
+****************************Convert to png****************************
+
+```jsx
+cd ../usefulscripits
+python pgm_to_png.py
 ```
 
 ## Unity
