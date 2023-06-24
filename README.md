@@ -17,7 +17,7 @@ catkin_make
 ```
 
 ```bash
-source Jackal_ws/devel/setup.bash
+source devel/setup.bash
 ```
 
 Launch rviz
