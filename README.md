@@ -17,6 +17,10 @@ chmod +x requirements.txt
 
 ### Steps
 
+```bash
+source ~/Desktop/Jackal_ws/devel/setup.bash
+```
+
 Launch rviz
 
 ```bash
@@ -28,7 +32,12 @@ roslaunch jackal_navigation gmapping_demo.launch
 ```
 
 ```bash
-roslaunch jackal_viz view_robot.launch config:**=**gmapping
+roslaunch jackal_viz view_robot.launch config:=gmapping
+```
+
+```bash
+cd ~/Desktop/Github/SymbioticRobots/assets/
+rosrun testing map_maker.py
 ```
 
 ************************Save the map************************
