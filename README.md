@@ -1,24 +1,20 @@
 # SymbioticRobots
-```
-sudo apt install git-all -y
-```
-
-```bash
-git clone https://github.com/oscell/SymbioticRobots.git
-cd SymbioticRobots
-```
-
-```bash
-chmod +x requirements.txt
-./requirements.txt
-```
 
 **LAUNCH GAZEBO**
 
 ### Steps
 
 ```bash
-source ~/Desktop/Jackal_ws/devel/setup.bash
+cd SymbioticRobots
+
+```
+
+```bash
+catkin_make
+```
+
+```bash
+source Jackal_ws/devel/setup.bash
 ```
 
 Launch rviz
@@ -54,11 +50,7 @@ cd ../usefulscripits
 python pgm_to_png.py
 ```
 
-## Unity
-#### Installation
-Unity 2020.3.2f1
-
-### Installation
+## Unity Installation
 
 ### Unity Hub
 
@@ -93,3 +85,19 @@ To [Install Unity](https://unity.com/download) we will first install [Unity Hub]
 We will install Unity 2020.3.2f1, although it is not explicitly mentioned, it [can work on Ubuntu 16.04](https://docs.unity3d.com/2020.1/Documentation/Manual/system-requirements.html).
 
 Once logged into Unity Hub open `Install editor > 2020.3.48f1 LTS.`
+
+
+## Linux setup Installation
+```
+sudo apt install git-all -y
+```
+
+```bash
+git clone https://github.com/oscell/SymbioticRobots.git
+cd SymbioticRobots
+```
+
+```bash
+chmod +x requirements.txt
+./requirements.txt
+```
