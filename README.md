@@ -1,7 +1,7 @@
 # SymbioticRobots
 
 ```bash
-ros2 run ros_tcp_endpoint default_server_endpoint --ros-args -p ROS_IP:=127.0.0.1 -p ROS_TCP_PORT:=10000
+roslaunch ros_tcp_endpoint endpoint.launch tcp_ip:=127.0.0.1 tcp_port:=10000
 ```
 
 Open Robotics/ROS Settings from the Unity menu bar, and set the ROS IP Address variable to the IP you set
