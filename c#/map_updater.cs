@@ -3,8 +3,8 @@ using UnityEngine;
 
 public class MapUpdater : MonoBehaviour
 {
-    public string livemap_path = "C:/Path/To/Your/Image.png";
-    public string fullmap_path = "C:/Path/To/Your/Image.png";
+    public string livemap_path = "/home/oscar/Desktop/SymbioticRobots/Unity/My_first_2D/Assets/Map/mymap.png";
+    public string fullmap_path = "/home/oscar/Desktop/SymbioticRobots/Unity/My_first_2D/Assets/Map/full_map.png";
 
     public SpriteRenderer mapRenderer;
     public bool updateMode = true;  // Add this line
