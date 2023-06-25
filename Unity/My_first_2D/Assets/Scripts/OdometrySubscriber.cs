@@ -21,8 +21,8 @@ public class OdometrySubscriber : MonoBehaviour
         Vector3 eulerRotation = rosOrientation.eulerAngles;
 
 
-        robot.transform.position = new Vector3((float)position.x, (float)position.y, (float)position.z);
-	robot.transform.rotation = Quaternion.Euler(eulerRotation.z+90,90,90);
+        robot.transform.position = new Vector3((float)position.y, -(float)position.x, (float)position.z);
+	robot.transform.rotation = Quaternion.Euler(-eulerRotation.z+270,90,90);
 
     }
 }

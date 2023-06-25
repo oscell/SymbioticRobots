@@ -1,11 +1,5 @@
 # SymbioticRobots
 
-```bash
-roslaunch ros_tcp_endpoint endpoint.launch tcp_ip:=127.0.0.1 tcp_port:=10000
-```
-
-Open Robotics/ROS Settings from the Unity menu bar, and set the ROS IP Address variable to the IP you set
-
 ### SimulationSteps
 
 ```bash
@@ -43,6 +37,13 @@ roslaunch jackal_navigation amcl_demo.launch map_file:=../assets/full_map.yml
 ```bash
 roslaunch jackal_viz view_robot.launch config:=localization
 ```
+#### Ros TCP connection
+
+```bash
+roslaunch ros_tcp_endpoint endpoint.launch tcp_ip:=127.0.0.1 tcp_port:=10000
+```
+
+Open Robotics/ROS Settings from the Unity menu bar, and set the ROS IP Address variable to the IP you set
 
 
 ```bash
