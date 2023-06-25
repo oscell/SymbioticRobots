@@ -26,13 +26,24 @@ Launch rviz
 roslaunch jackal_gazebo jackal_world.launch config:=front_laser
 ```
 
+#### Mapping
 ```bash
 roslaunch jackal_navigation gmapping_demo.launch
 ```
 
+
 ```bash
 roslaunch jackal_viz view_robot.launch config:=gmapping
 ```
+#### With a map
+```bash
+roslaunch jackal_navigation amcl_demo.launch map_file:=../assets/full_map.yml
+```
+
+```bash
+roslaunch jackal_viz view_robot.launch config:=localization
+```
+
 
 ```bash
 cd ~/Desktop/Github/SymbioticRobots/assets/
