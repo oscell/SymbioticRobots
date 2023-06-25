@@ -5,33 +5,27 @@ import yaml
 
 path = r"/home/oscar/Desktop/SymbioticRobots/assets/"
 
+import yaml
+from PIL import Image
 
-# Turn on interactive mode
-plt.ion()
+# Replace with your image file path
+image_path = path+'full_map.png'
+# Replace with your yaml file path
+yaml_path = path+'full_map.yaml'
 
-# Load the image
-img = Image.open(path+'full_map.png')
+# Open and read the image
+image = Image.open(image_path)
+print('Image size:', image.size)
+print('Image mode:', image.mode)
 
-# Display the image
-plt.imshow(img)
-
-# Draw and show the image for some time then close
-plt.draw()
-plt.pause(0.001)
-
-# Output the shape of the image
-width, height = img.size
-print("The image shape is: {} pixels wide x {} pixels high".format(width, height))
-
-# Load the YAML file
-with open(path+'full_map.yaml', 'r') as file:
-    yaml_file = yaml.safe_load(file)
-
-# Print the contents of the YAML file
-print(yaml.dump(yaml_file, default_flow_style=False))
+# Open and read the yaml file
+with open(yaml_path, 'r') as stream:
+    try:
+        yaml_content = yaml.safe_load(stream)
+    except yaml.YAMLError as exc:
+        print(exc)
+    else:
+        print('YAML content:', yaml_content)
 
 
 
-
-# Close the plot
-plt.close()
