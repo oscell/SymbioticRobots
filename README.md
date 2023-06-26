@@ -31,7 +31,7 @@ roslaunch jackal_viz view_robot.launch config:=gmapping
 ```
 #### With a map
 ```bash
-roslaunch jackal_navigation amcl_demo.launch map_file:=/home/oscar/Desktop/SymbioticRobots/assets/full_map.yml
+roslaunch jackal_navigation amcl_demo.launch
 ```
 
 ```bash
@@ -40,6 +40,7 @@ roslaunch jackal_viz view_robot.launch config:=localization
 #### Ros TCP connection
 
 ```bash
+source devel/setup.bash
 roslaunch ros_tcp_endpoint endpoint.launch tcp_ip:=127.0.0.1 tcp_port:=10000
 ```
 
