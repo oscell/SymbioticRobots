@@ -7,6 +7,8 @@ using RosMessageTypes.Nav;
 public class OdometrySubscriber : MonoBehaviour
 {
     public GameObject robot;
+    public GameObject map
+    
     void Start()
     {
         ROSConnection.GetOrCreateInstance().Subscribe<OdometryMsg>("/odometry/filtered", HandleOdometryMessage);

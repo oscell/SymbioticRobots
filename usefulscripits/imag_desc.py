@@ -16,7 +16,6 @@ yaml_path = path+'full_map.yaml'
 # Open and read the image
 image = Image.open(image_path)
 print('Image size:', image.size)
-print('Image mode:', image.mode)
 
 # Open and read the yaml file
 with open(yaml_path, 'r') as stream:
