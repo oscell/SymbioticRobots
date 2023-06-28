@@ -1,5 +1,8 @@
 # SymbioticRobots
 
+### Exploring a map
+![Exploring](assets/Exploring_gif.gif)
+
 ### SimulationSteps
 
 ```bash
