@@ -6,7 +6,7 @@
 ### SimulationSteps
 
 ```bash
-cd SymbioticRobots/Jackal_ws
+cd ~/Desktop/SymbioticRobots/Jackal_ws/
 ```
 
 ```bash
