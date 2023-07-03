@@ -46,6 +46,12 @@ roslaunch jackal_viz view_robot.launch config:=localization
 ifconfig
 ```
 
+#### VM using hotspot
+```bash
+roslaunch ros_tcp_endpoint endpoint.launch tcp_ip:=192.168.86.39 tcp_port:=10000
+```
+
+
 ```bash
 roslaunch ros_tcp_endpoint endpoint.launch tcp_ip:=127.0.0.1 tcp_port:=10000
 ```
