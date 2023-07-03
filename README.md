@@ -60,6 +60,11 @@ roslaunch ros_tcp_endpoint endpoint.launch tcp_ip:=127.0.0.1 tcp_port:=10000
 Open Robotics/ROS Settings from the Unity menu bar, and set the ROS IP Address variable to the IP you set
 
 
+```bash
+source ~/Desktop/SymbioticRobots/Jackal_ws/devel/setup.bash
+rosrun utils base_link_publisher.py
+```
+
 
 ************************Save the map************************
 
