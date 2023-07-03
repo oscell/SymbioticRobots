@@ -62,7 +62,7 @@ Open Robotics/ROS Settings from the Unity menu bar, and set the ROS IP Address v
 
 ```bash
 source ~/Desktop/SymbioticRobots/Jackal_ws/devel/setup.bash
-rosrun utils base_link_publisher.py
+rosrun utils base_link_listener.py
 ```
 
 
