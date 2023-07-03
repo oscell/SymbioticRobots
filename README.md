@@ -126,9 +126,14 @@ This page provides brief instructions on installing the Unity Robotics packages.
 To install from a local clone of the repository, see [installing a local package](https://docs.unity3d.com/Manual/upm-ui-local.html) in the Unity manual.
 
 ## Install Jackal
+### Kinetic
 
 ```bash
 sudo apt-get install ros-kinetic-jackal-simulator ros-kinetic-jackal-desktop ros-kinetic-jackal-navigation
+```
+### Melodic
+```bash
+sudo apt-get install ros-melodic-jackal-simulator ros-melodic-jackal-desktop ros-melodic-jackal-navigation
 ```
 
 ## Linux setup Installation
