@@ -48,7 +48,7 @@ ifconfig
 
 #### VM using hotspot
 ```bash
-source ~/Desktop/Jackal_ws/devel/setup.bash
+source ~/Desktop/SymbioticRobots/Jackal_ws/devel/setup.bash
 roslaunch ros_tcp_endpoint endpoint.launch tcp_ip:=192.168.86.39 tcp_port:=10000
 ```
 
