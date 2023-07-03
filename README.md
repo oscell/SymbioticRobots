@@ -43,16 +43,16 @@ roslaunch jackal_viz view_robot.launch config:=localization
 #### Ros TCP connection
 
 ```bash
+ifconfig
+```
+
+```bash
 roslaunch ros_tcp_endpoint endpoint.launch tcp_ip:=127.0.0.1 tcp_port:=10000
 ```
 
 Open Robotics/ROS Settings from the Unity menu bar, and set the ROS IP Address variable to the IP you set
 
 
-```bash
-cd ~/Desktop/Github/SymbioticRobots/assets/
-rosrun testing map_maker.py
-```
 
 ************************Save the map************************
 
