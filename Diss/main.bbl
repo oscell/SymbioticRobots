@@ -1,0 +1,37 @@
+\begin{thebibliography}{2}
+\expandafter\ifx\csname natexlab\endcsname\relax\def\natexlab#1{#1}\fi
+\providecommand{\url}[1]{\texttt{#1}}
+\providecommand{\href}[2]{#2}
+\providecommand{\path}[1]{#1}
+\providecommand{\DOIprefix}{doi:}
+\providecommand{\ArXivprefix}{arXiv:}
+\providecommand{\URLprefix}{URL: }
+\providecommand{\Pubmedprefix}{pmid:}
+\providecommand{\doi}[1]{\href{http://dx.doi.org/#1}{\path{#1}}}
+\providecommand{\Pubmed}[1]{\href{pmid:#1}{\path{#1}}}
+\providecommand{\bibinfo}[2]{#2}
+\ifx\xfnm\relax \def\xfnm[#1]{\unskip,\space#1}\fi
+%Type = Article
+\bibitem[{Sweere et~al.(2022)Sweere, Valtchanov, Lieu, Vojtekova, Verdugo,
+  Santos-Lleo, Pacaud, Briassouli and C{\'a}mpora~P{\'e}rez}]{sweere2022deep}
+\bibinfo{author}{Sweere, S.F.}, \bibinfo{author}{Valtchanov, I.},
+  \bibinfo{author}{Lieu, M.}, \bibinfo{author}{Vojtekova, A.},
+  \bibinfo{author}{Verdugo, E.}, \bibinfo{author}{Santos-Lleo, M.},
+  \bibinfo{author}{Pacaud, F.}, \bibinfo{author}{Briassouli, A.},
+  \bibinfo{author}{C{\'a}mpora~P{\'e}rez, D.}, \bibinfo{year}{2022}.
+\newblock \bibinfo{title}{Deep learning-based super-resolution and de-noising
+  for xmm-newton images}.
+\newblock \bibinfo{journal}{Monthly Notices of the Royal Astronomical Society}
+  \bibinfo{volume}{517}, \bibinfo{pages}{4054--4069}.
+%Type = Article
+\bibitem[{Vojtekova et~al.(2021)Vojtekova, Lieu, Valtchanov, Altieri, Old, Chen
+  and Hroch}]{vojtekova2021learning}
+\bibinfo{author}{Vojtekova, A.}, \bibinfo{author}{Lieu, M.},
+  \bibinfo{author}{Valtchanov, I.}, \bibinfo{author}{Altieri, B.},
+  \bibinfo{author}{Old, L.}, \bibinfo{author}{Chen, Q.},
+  \bibinfo{author}{Hroch, F.}, \bibinfo{year}{2021}.
+\newblock \bibinfo{title}{Learning to denoise astronomical images with u-nets}.
+\newblock \bibinfo{journal}{Monthly Notices of the Royal Astronomical Society}
+  \bibinfo{volume}{503}, \bibinfo{pages}{3204--3215}.
+
+\end{thebibliography}
