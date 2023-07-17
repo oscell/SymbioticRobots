@@ -34,7 +34,7 @@ roslaunch jackal_viz view_robot.launch config:=gmapping
 ```
 #### With a map
 ```bash
-roslaunch jackal_navigation amcl_demo.launch map_file:=/home/oscar/Desktop/SymbioticRobots/assets/full_map.yml
+roslaunch jackal_navigation amcl_demo.launch
 ```
 
 ```bash
