@@ -74,8 +74,8 @@ roslaunch ros_tcp_endpoint endpoint.launch tcp_ip:=127.0.0.1 tcp_port:=10000
 
 ### Requirements
 
-- [Ubuntu 18.04](https://releases.ubuntu.com/18.04/)
-- [ROS melodic](https://wiki.ros.org/melodic/Installation/Ubuntu) or its [wsl](https://ubuntu.com/tutorials/install-ubuntu-on-wsl2-on-windows-10#1-overview)
+- [Ubuntu 18.04](https://releases.ubuntu.com/18.04/) or its [wsl](https://ubuntu.com/tutorials/install-ubuntu-on-wsl2-on-windows-10#1-overview)
+- [ROS melodic](https://wiki.ros.org/melodic/Installation/Ubuntu) 
 
 > Note you might want to source your workspace from `.bashrc`
 
@@ -86,13 +86,9 @@ source ~/.bashrc
 ```
 
 ### Install jackal packages
-=======
 source ~/Desktop/SymbioticRobots/Jackal_ws/devel/setup.bash
 rosrun utils base_link_listener.py
 ```
-
-
-************************Save the map************************
 
 
 ```bash
