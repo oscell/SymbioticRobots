@@ -1,5 +1,6 @@
 # SymbioticRobots
 
+
 ## Overview
 
 This project uses the [HoloLens 2](https://learn.microsoft.com/en-us/hololens/hololens-commercial-features), the [realsense camera](https://github.com/IntelRealSense/realsense-ros/tree/ros1-legacy) and built-in [clearpath jackal](https://www.clearpathrobotics.com/assets/guides/kinetic/jackal/navigation.html) laser to build an app for teleoperation. Start ith the Installation then go to Launch simulation.
@@ -44,6 +45,8 @@ roslaunch jackal_gazebo spawn_jackal.launch config:=cam_laser
 
 ```bash
 rviz rviz
+=======
+roslaunch jackal_navigation amcl_demo.launch
 ```
 
 ```bash
@@ -51,7 +54,18 @@ roslaunch jackal_navigation odom_navigation_demo.launch
 ```
 
 ```bash
-roslaunch jackal_navigation gmapping.launch
+ifconfig
+```
+
+#### VM using hotspot
+```bash
+source ~/Desktop/SymbioticRobots/Jackal_ws/devel/setup.bash
+roslaunch ros_tcp_endpoint endpoint.launch tcp_ip:=192.168.86.39 tcp_port:=10000
+```
+
+
+```bash
+roslaunch ros_tcp_endpoint endpoint.launch tcp_ip:=127.0.0.1 tcp_port:=10000
 ```
 
 # Installation
@@ -66,11 +80,20 @@ roslaunch jackal_navigation gmapping.launch
 > Note you might want to source your workspace from `.bashrc`
 
 ```bash
+
 echo "source /opt/ros/melodic/setup.bash" >> ~/.bashrc
 source ~/.bashrc
 ```
 
 ### Install jackal packages
+=======
+source ~/Desktop/SymbioticRobots/Jackal_ws/devel/setup.bash
+rosrun utils base_link_listener.py
+```
+
+
+************************Save the map************************
+
 
 ```bash
 sudo apt-get install ros-melodic-jackal-simulator ros-melodic-jackal-desktop ros-melodic-jackal-navigation -y
@@ -139,6 +162,16 @@ This page provides brief instructions on installing the Unity Robotics packages.
 
 To install from a local clone of the repository, see [installing a local package](https://docs.unity3d.com/Manual/upm-ui-local.html) in the Unity manual.
 
+## Install Jackal
+### Kinetic
+
+```bash
+sudo apt-get install ros-kinetic-jackal-simulator ros-kinetic-jackal-desktop ros-kinetic-jackal-navigation
+```
+### Melodic
+```bash
+sudo apt-get install ros-melodic-jackal-simulator ros-melodic-jackal-desktop ros-melodic-jackal-navigation
+```
 
 
 
