@@ -1,46 +1,57 @@
 # SymbioticRobots
 
-### Exploring a map
-![Exploring](assets/Exploring_gif.gif)
 
-### SimulationSteps
+## Overview
+
+This project uses the [HoloLens 2](https://learn.microsoft.com/en-us/hololens/hololens-commercial-features), the [realsense camera](https://github.com/IntelRealSense/realsense-ros/tree/ros1-legacy) and built-in [clearpath jackal](https://www.clearpathrobotics.com/assets/guides/kinetic/jackal/navigation.html) laser to build an app for teleoperation. Start ith the Installation then go to Launch simulation.
+
+## Prepare the workspace
+
+Clone: 
 
 ```bash
-cd ~/Desktop/SymbioticRobots/Jackal_ws/
+git clone https://github.com/oscell/SymbioticRobots.git
 ```
 
+Open the subsystem:
+
 ```bash
+ubuntu1804
+```
+
+Go to workspace
+
+```bash
+cd SymbioticRobots/jackal_ws
+```
+
+Initiate the workspace:
+
+```bash
+catkin_init_workspace src/
 catkin_make
+```
+## Launch simulation
+
+```bash
+source devel/setup.bash
+roslaunch aws_robomaker_small_warehouse_world view_small_warehouse.launch
 ```
 
 ```bash
 source devel/setup.bash
+roslaunch jackal_gazebo spawn_jackal.launch config:=cam_laser
 ```
 
-Launch rviz
-
 ```bash
-roslaunch jackal_gazebo jackal_world.launch config:=front_laser
-```
-
-#### Mapping
-```bash
-roslaunch jackal_navigation gmapping_demo.launch
-```
-
-
-```bash
-roslaunch jackal_viz view_robot.launch config:=gmapping
-```
-#### With a map
-```bash
+rviz rviz
+=======
 roslaunch jackal_navigation amcl_demo.launch
 ```
 
 ```bash
-roslaunch jackal_viz view_robot.launch config:=localization
+roslaunch jackal_navigation odom_navigation_demo.launch
 ```
-#### Ros TCP connection
 
 ```bash
 ifconfig
@@ -57,10 +68,25 @@ roslaunch ros_tcp_endpoint endpoint.launch tcp_ip:=192.168.86.39 tcp_port:=10000
 roslaunch ros_tcp_endpoint endpoint.launch tcp_ip:=127.0.0.1 tcp_port:=10000
 ```
 
-Open Robotics/ROS Settings from the Unity menu bar, and set the ROS IP Address variable to the IP you set
+# Installation
 
+## Linux setup Installation
+
+### Requirements
+
+- [Ubuntu 18.04](https://releases.ubuntu.com/18.04/)
+- [ROS melodic](https://wiki.ros.org/melodic/Installation/Ubuntu) or its [wsl](https://ubuntu.com/tutorials/install-ubuntu-on-wsl2-on-windows-10#1-overview)
+
+> Note you might want to source your workspace from `.bashrc`
 
 ```bash
+
+echo "source /opt/ros/melodic/setup.bash" >> ~/.bashrc
+source ~/.bashrc
+```
+
+### Install jackal packages
+=======
 source ~/Desktop/SymbioticRobots/Jackal_ws/devel/setup.bash
 rosrun utils base_link_listener.py
 ```
@@ -68,16 +94,15 @@ rosrun utils base_link_listener.py
 
 ************************Save the map************************
 
+
 ```bash
-cd ~/Desktop/Github/SymbioticRobots/assets
-rosrun map_server map_saver -f mymap1
+sudo apt-get install ros-melodic-jackal-simulator ros-melodic-jackal-desktop ros-melodic-jackal-navigation -y
 ```
 
-****************************Convert to png****************************
+### Install Realsense packages
 
-```jsx
-cd ../usefulscripits
-python pgm_to_png.py
+```bash
+sudo apt-get install ros-melodic-realsense2-camera
 ```
 
 ## Unity Installation
@@ -148,6 +173,77 @@ sudo apt-get install ros-kinetic-jackal-simulator ros-kinetic-jackal-desktop ros
 sudo apt-get install ros-melodic-jackal-simulator ros-melodic-jackal-desktop ros-melodic-jackal-navigation
 ```
 
+
+
+<!-- # SymbioticRobots
+
+### SimulationSteps
+
+```bash
+cd SymbioticRobots/Jackal_ws
+```
+
+```bash
+catkin_make
+```
+
+```bash
+source devel/setup.bash
+```
+
+Launch rviz
+
+```bash
+roslaunch jackal_gazebo jackal_world.launch config:=front_laser
+```
+
+#### Mapping
+```bash
+roslaunch jackal_navigation gmapping_demo.launch
+```
+
+
+```bash
+roslaunch jackal_viz view_robot.launch config:=gmapping
+```
+#### With a map
+```bash
+roslaunch jackal_navigation amcl_demo.launch map_file:=/home/oscar/Desktop/SymbioticRobots/assets/full_map.yml
+```
+
+```bash
+roslaunch jackal_viz view_robot.launch config:=localization
+```
+#### Ros TCP connection
+
+```bash
+roslaunch ros_tcp_endpoint endpoint.launch tcp_ip:=127.0.0.1 tcp_port:=10000
+```
+
+Open Robotics/ROS Settings from the Unity menu bar, and set the ROS IP Address variable to the IP you set
+
+
+```bash
+cd ~/Desktop/Github/SymbioticRobots/assets/
+rosrun testing map_maker.py
+```
+
+************************Save the map************************
+
+```bash
+cd ~/Desktop/Github/SymbioticRobots/assets
+rosrun map_server map_saver -f mymap1
+```
+
+****************************Convert to png****************************
+
+```jsx
+cd ../usefulscripits
+python pgm_to_png.py
+```
+
+
+
 ## Linux setup Installation
 ```
 sudo apt install git-all -y
@@ -161,4 +257,4 @@ cd SymbioticRobots
 ```bash
 chmod +x requirements.txt
 ./requirements.txt
-```
+``` -->

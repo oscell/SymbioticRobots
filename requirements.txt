@@ -30,24 +30,17 @@ then
   sudo apt install -y code
 fi
 
-if ! command -v chromium-browser &> /dev/null
-then
-  echo -e "\e[41mInstalling Chromium...\e[0m"
-  sudo apt-get update -y
-  sudo apt-get install -y chromium-browser
-fi
 
-
-echo -e "\e[41mInstalling ROS Kinetic...\e[0m"
+echo -e "\e[41mInstalling ROS melodic...\e[0m"
 sudo sh -c 'echo "deb http://packages.ros.org/ros/ubuntu $(lsb_release -sc) main" > /etc/apt/sources.list.d/ros-latest.list'
 
 sudo apt install curl -y # if you haven't already installed curl
 curl -s https://raw.githubusercontent.com/ros/rosdistro/master/ros.asc | sudo apt-key add -
 
 sudo apt-get update -y
-sudo apt-get install ros-kinetic-desktop-full -y
+sudo apt-get install ros-melodic-desktop-full -y
 
-echo "source /opt/ros/kinetic/setup.bash" >> ~/.bashrc
+echo "source /opt/ros/melodic/setup.bash" >> ~/.bashrc
 source ~/.bashrc
 
 sudo apt install python-rosdep python-rosinstall python-rosinstall-generator python-wstool build-essential -y
@@ -58,7 +51,7 @@ sudo rosdep init
 rosdep update
 
 echo -e "\e[41mInstalling Jackal stuff...\e[0m"
-sudo apt-get install ros-kinetic-jackal-simulator ros-kinetic-jackal-desktop ros-kinetic-jackal-navigation -y
+sudo apt-get install ros-melodic-jackal-simulator ros-melodic-jackal-desktop ros-melodic-jackal-navigation -y
 
 git config --global user.name "oscell"
 git config --global user.email "oscar.meunierpbs@gmail.com"

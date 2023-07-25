@@ -1,0 +1,7 @@
+# The front_laser configuration of Jackal is sufficient for
+# basic gmapping and navigation. It is mostly the default
+# config, but with a SICK LMS100 series LIDAR on the front,
+# pointing forward.
+
+JACKAL_LASER=1
+JACKAL_URDF_EXTRAS=/home/oscell/jackal_ws/src/jackal_description/urdf/realsense.urdf.xacro

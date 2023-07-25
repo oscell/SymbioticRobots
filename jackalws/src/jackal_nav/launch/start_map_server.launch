@@ -1,0 +1,7 @@
+<launch>
+    <node name="map_server" pkg="map_server" type="map_server" args="$(find jackal_nav)/maps/aws_warehouse.yaml">
+        <param name="frame_id" value="map" />
+    </node>
+    <node pkg="tf" type="static_transform_publisher" name="odom_to_map_link"
+        args="0 0 0 0 0 0 /odom /map 60"/>
+</launch>

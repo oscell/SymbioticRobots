@@ -1,0 +1,24 @@
+<launch> 
+  <!-- BEGIN ROBOT 1-->
+  <group ns="jackal1">
+    <param name="tf_prefix" value="robot1_tf" />
+    <include file="$(find jackal_gazebo)/launch/spawn_jackal.launch" >
+    <arg name="config" value="front_laser" />
+    <arg name="robot_no" value="1" />
+    <arg name="y" value="-1" />
+    </include>
+  </group>
+
+  <!-- BEGIN ROBOT 2-->
+  <group ns="jackal2">
+    <param name="tf_prefix" value="robot2_tf" />
+    <include file="$(find jackal_gazebo)/launch/spawn_jackal.launch" >
+    <arg name="config" value="front_laser" />
+    <arg name="robot_no" value="2" />
+    <arg name="y" value="-2" />
+    </include>
+  </group>
+
+  <!-- <node pkg="tf" type="static_transform_publisher" name="map_to_jackal1" args="0 -1 0 0 0 0 odom robot1_tf/base_link 60" />
+  <node pkg="tf" type="static_transform_publisher" name="map_to_jackal2" args="0 -2 0 0 0 0 odom robot2_tf/base_link 60" /> -->
+</launch>
