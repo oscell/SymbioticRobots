@@ -1,5 +1,0 @@
-<launch>
-  <param name="use_gui" value="true"/>
-  <arg name="config" value="jackal_nav_viz" />
-  <node name="rviz" pkg="rviz" type="rviz" args="-d $(find jackal_gazebo)/rviz/$(arg config).rviz" />
-</launch>
