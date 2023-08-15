@@ -20,17 +20,18 @@ This project outlines the steps to building an application for the [HoloLens 2](
 - **[Dissertation](https://github.com/oscell/SymbioticRobots/blob/main/Diss/MSc_HoloLens_Jackal_2391076.pdf)**: The main document detailing the research, methodology, and findings.
 
 ## Setup & Installation
+Unity This section explains the steps in setting up the Unity environment. Before doing this howver the [Jackal_cam_lasers](https://github.com/oscell/Jackal_cam_lasers) must be set up.
 
-This section explains the steps in setting up the Unity environment. Before doing this howver the [Jackal_cam_lasers](https://github.com/oscell/Jackal_cam_lasers) must be set up.
+
+Clone:
+```
+git clone --recurse-submodules https://github.com/oscell/SymbioticRobots.git
+```
 
 ### Requirements
-## Unity Installation
-
-### Unity Hub
 
 To [Install Unity](https://unity.com/download) we will first install [Unity Hub](https://docs.unity3d.com/hub/manual/InstallHub.html#install-hub-linux):
 
-### Unity editor
 
 We will install Unity 2020.3.2f1, although it is not explicitly mentioned, it [can work on Ubuntu 16.04](https://docs.unity3d.com/2020.1/Documentation/Manual/system-requirements.html).
 
