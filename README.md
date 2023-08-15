@@ -4,7 +4,7 @@
 
 This project investigates the use of Mixed Reality (MR) and Digital Twin (DT) technologies to enable remote operations, inspections, and training for maintenance tasks in access-challenged or hazardous environments such as offshore wind farms or nuclear facilities. By integrating a ground robot equipped with sensors, a HoloLens device, and digital twin models, we've conceived a proof-of-concept system that facilitates the visualization and control of the robotic platform. The methodology describes a framework for deploying mixed reality applications at different levels of the Reality-Virtuality (RV) continuum. This is implemented through the fusion of Clearpath’s Jackal robot, HoloLens 2, ROS middleware, and the Unity platform. 
 
-For a detailed overview, refer to the [dissertation document](https://github.com/oscell/SymbioticRobots/blob/clean/Diss/MSc_HoloLens_Jackal_2391076.pdf).
+For a detailed overview, refer to the [dissertation document](https://github.com/oscell/SymbioticRobots/blob/main/Diss/MSc_HoloLens_Jackal_2391076.pdf).
 
 ## Overview
 
@@ -13,11 +13,11 @@ This project outlines the steps to building an application for the [HoloLens 2](
 
 - **[Jackal_cam_lasers](https://github.com/oscell/Jackal_cam_lasers)**: The ROS workspace for this simulation. 
 
-- **[Unity Package](https://github.com/oscell/SymbioticRobots/tree/clean/UnityPackage)**: Contains the Unity package with all scenes and the development environment.
+- **[Unity Package](https://github.com/oscell/SymbioticRobots/tree/main/UnityPackage)**: Contains the Unity package with all scenes and the development environment.
 
-- **[Poster](https://github.com/oscell/SymbioticRobots/blob/clean/Diss/Poster.pdf)**: A visual representation of the project.
+- **[Poster](https://github.com/oscell/SymbioticRobots/blob/main/Diss/Poster.pdf)**: A visual representation of the project.
 
-- **[Dissertation](https://github.com/oscell/SymbioticRobots/blob/clean/Diss/MSc_HoloLens_Jackal_2391076.pdf)**: The main document detailing the research, methodology, and findings.
+- **[Dissertation](https://github.com/oscell/SymbioticRobots/blob/main/Diss/MSc_HoloLens_Jackal_2391076.pdf)**: The main document detailing the research, methodology, and findings.
 
 ## Setup & Installation
 
@@ -76,7 +76,7 @@ This page provides brief instructions on installing the Unity Robotics packages.
 ### Install custom package
 Assets > Import package > Custom package.
 
-In the [UnityPackage](https://github.com/oscell/SymbioticRobots/tree/clean/UnityPackage) repository the Jackal_holoLens2 and MRTK profile can be found. This should be improted into your unity project.
+In the [UnityPackage](https://github.com/oscell/SymbioticRobots/tree/main/UnityPackage) repository the Jackal_holoLens2 and MRTK profile can be found. This should be improted into your unity project.
 
 To install from a local clone of the repository, see [installing a local package](https://docs.unity3d.com/Manual/upm-ui-local.html) in the Unity manual.
 
@@ -100,22 +100,31 @@ To install from a local clone of the repository, see [installing a local packag
 This project was developed as part of a dissertation. Special thanks to all contributors and advisors.
 ## Launch simulation
 
+**Terminal 1: Launch World**
 ```bash
 source devel/setup.bash
 roslaunch aws_robomaker_small_warehouse_world view_small_warehouse.launch
 ```
-
+**Terminal 2: Launch Jackal**
 ```bash
 source devel/setup.bash
 roslaunch jackal_gazebo spawn_jackal.launch config:=cam_laser
 ```
-
+**Terminal 3: launch SLAM**
 ```bash
-roslaunch jackal_navigation odom_navigation_demo.launch
+roslaunch jackal_navigation gmapping_demo.launch
 ```
 
+**Terminal 4: Rviz**
+```bash
+rosrun rviz rviz -d ~/Jackal_cam_lasers/rviz/holo.rviz
+```
 
+**Terminal 5: ROS TCP connection**
 
+```bash
+ifconfig
+```
 #### Networking
 
 ```bash
