@@ -1,13 +1,14 @@
 
 # SymbioticRobots: Mixed Reality & Digital Twin for Remote Operations
-## Overview
+## Abstract
 
 This project investigates the use of Mixed Reality (MR) and Digital Twin (DT) technologies to enable remote operations, inspections, and training for maintenance tasks in access-challenged or hazardous environments such as offshore wind farms or nuclear facilities. By integrating a ground robot equipped with sensors, a HoloLens device, and digital twin models, we've conceived a proof-of-concept system that facilitates the visualization and control of the robotic platform. The methodology describes a framework for deploying mixed reality applications at different levels of the Reality-Virtuality (RV) continuum. This is implemented through the fusion of Clearpath’s Jackal robot, HoloLens 2, ROS middleware, and the Unity platform. 
 
 For a detailed overview, refer to the [dissertation document](https://github.com/oscell/MSc_HoloLens_Jackal_2391076).
 
+## Overview
 
-This project uses the [HoloLens 2](https://learn.microsoft.com/en-us/hololens/hololens-commercial-features), the [realsense camera](https://github.com/IntelRealSense/realsense-ros/tree/ros1-legacy) and built-in [clearpath jackal](https://www.clearpathrobotics.com/assets/guides/kinetic/jackal/navigation.html) laser to build an app for teleoperation. Start with the [Installation](https://github.com/oscell/SymbioticRobots#installation), then go to Launch simulation.
+This project outlines the steps to building an application for the [HoloLens 2](https://learn.microsoft.com/en-us/hololens/hololens-commercial-features) that is used to interact with the DT in the ROS workspace. This is constructed using the [realsense camera](https://github.com/IntelRealSense/realsense-ros/tree/ros1-legacy) and the [clearpath jackal](https://www.clearpathrobotics.com/assets/guides/kinetic/jackal/navigation.html).
 ## Repository Contents
 
 - **Jackal_cam_lasers**: The ROS workspace. [Link to repository](https://github.com/oscell/Jackal_cam_lasers)
