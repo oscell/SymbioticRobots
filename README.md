@@ -1,3 +1,69 @@
+
+# SymbioticRobots: Mixed Reality & Digital Twin for Remote Operations
+## Overview
+
+This project investigates the use of Mixed Reality (MR) and Digital Twin (DT) technologies to enable remote operations, inspections, and training for maintenance tasks in access-challenged or hazardous environments such as offshore wind farms or nuclear facilities. By integrating a ground robot equipped with sensors, a HoloLens device, and digital twin models, we've conceived a proof-of-concept system that facilitates the visualization and control of the robotic platform. The methodology describes a framework for deploying mixed reality applications at different levels of the Reality-Virtuality (RV) continuum. This is implemented through the fusion of Clearpath’s Jackal robot, HoloLens 2, ROS middleware, and the Unity platform. 
+
+For a detailed overview, refer to the [dissertation document](https://github.com/oscell/MSc_HoloLens_Jackal_2391076).
+
+
+This project uses the [HoloLens 2](https://learn.microsoft.com/en-us/hololens/hololens-commercial-features), the [realsense camera](https://github.com/IntelRealSense/realsense-ros/tree/ros1-legacy) and built-in [clearpath jackal](https://www.clearpathrobotics.com/assets/guides/kinetic/jackal/navigation.html) laser to build an app for teleoperation. Start with the [Installation](https://github.com/oscell/SymbioticRobots#installation), then go to Launch simulation.
+## Repository Contents
+
+- **Jackal_cam_lasers**: The ROS workspace. [Link to repository](https://github.com/oscell/Jackal_cam_lasers)
+- **Unity Package**: Contains the Unity package with all scenes and the development environment.
+- **Built App**: The application built for deployment on HoloLens 2.
+- **Poster**: A visual representation of the project.
+- **Dissertation**: The main document detailing the research, methodology, and findings.
+
+## Setup & Installation
+
+### 1. Prepare the Workspace
+
+```bash
+git clone https://github.com/oscell/SymbioticRobots.git
+ubuntu1804
+cd SymbioticRobots/jackal_ws
+catkin_init_workspace src/
+catkin_make
+```
+
+### 2. Launch Simulation
+
+```bash
+source devel/setup.bash
+roslaunch aws_robomaker_small_warehouse_world view_small_warehouse.launch
+```
+
+... [other commands]
+
+### 3. Linux Setup Installation
+
+#### Requirements
+
+- [Ubuntu 18.04](https://releases.ubuntu.com/18.04/) or its [wsl](https://ubuntu.com/tutorials/install-ubuntu-on-wsl2-on-windows-10#1-overview)
+- [ROS melodic](https://wiki.ros.org/melodic/Installation/Ubuntu) 
+
+... [other installation steps]
+
+### 4. Unity Installation
+
+... [Unity installation steps]
+
+## Additional Repositories
+
+- **Jackal_cam_lasers**: Contains the ROS workspace for the project. [Link to repository](https://github.com/oscell/Jackal_cam_lasers)
+- **Dissertation TEX Document**: The main document detailing the research, methodology, and findings. [Link to repository](https://github.com/oscell/MSc_HoloLens_Jackal_2391076) (private)
+
+## Acknowledgements
+
+This project was developed as part of a dissertation. Special thanks to all contributors and advisors.
+
+---
+
+This enhanced README provides a clearer structure and a brief overview of the project right at the beginning. It's always a good idea to keep the README concise and to the point, directing users to other documents or links for detailed information.
+
+
 # SymbioticRobots
 
 
