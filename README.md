@@ -41,7 +41,7 @@ Once logged into Unity Hub open `Install editor > 2020.3.48f1 LTS.`
 2. Switch build platform
     1. file > Build Settings
         
-        ![Untitled](assets\Images\buildSettings.png)
+        ![assets\Images\buildSettings.png](https://github.com/oscell/SymbioticRobots/blob/main/assets/Images/buildSettings.png)
 3. Use [Mixed Reality Feature Tool](https://www.microsoft.com/en-us/download/details.aspx?id=102778)
     1. Open the MixedRealityFeatureTool.exe and select he folder containing your project.
 
