@@ -4,205 +4,55 @@
 
 This project investigates the use of Mixed Reality (MR) and Digital Twin (DT) technologies to enable remote operations, inspections, and training for maintenance tasks in access-challenged or hazardous environments such as offshore wind farms or nuclear facilities. By integrating a ground robot equipped with sensors, a HoloLens device, and digital twin models, we've conceived a proof-of-concept system that facilitates the visualization and control of the robotic platform. The methodology describes a framework for deploying mixed reality applications at different levels of the Reality-Virtuality (RV) continuum. This is implemented through the fusion of Clearpath’s Jackal robot, HoloLens 2, ROS middleware, and the Unity platform. 
 
-For a detailed overview, refer to the [dissertation document](https://github.com/oscell/MSc_HoloLens_Jackal_2391076).
+For a detailed overview, refer to the [dissertation document](https://github.com/oscell/SymbioticRobots/blob/clean/Diss/MSc_HoloLens_Jackal_2391076.pdf).
 
 ## Overview
 
 This project outlines the steps to building an application for the [HoloLens 2](https://learn.microsoft.com/en-us/hololens/hololens-commercial-features) that is used to interact with the DT in the ROS workspace. This is constructed using the [realsense camera](https://github.com/IntelRealSense/realsense-ros/tree/ros1-legacy) and the [clearpath jackal](https://www.clearpathrobotics.com/assets/guides/kinetic/jackal/navigation.html).
 ## Repository Contents
 
-- **Jackal_cam_lasers**: The ROS workspace. [Link to repository](https://github.com/oscell/Jackal_cam_lasers)
-- **Unity Package**: Contains the Unity package with all scenes and the development environment.
-- **Built App**: The application built for deployment on HoloLens 2.
-- **Poster**: A visual representation of the project.
-- **Dissertation**: The main document detailing the research, methodology, and findings.
+- **[Jackal_cam_lasers](https://github.com/oscell/Jackal_cam_lasers)**: The ROS workspace for this simulation. 
+
+- **[Unity Package](https://github.com/oscell/SymbioticRobots/tree/clean/UnityPackage)**: Contains the Unity package with all scenes and the development environment.
+
+- **[Poster](https://github.com/oscell/SymbioticRobots/blob/clean/Diss/Poster.pdf)**: A visual representation of the project.
+
+- **[Dissertation](https://github.com/oscell/SymbioticRobots/blob/clean/Diss/MSc_HoloLens_Jackal_2391076.pdf)**: The main document detailing the research, methodology, and findings.
 
 ## Setup & Installation
 
-### 1. Prepare the Workspace
-
-```bash
-git clone https://github.com/oscell/SymbioticRobots.git
-ubuntu1804
-cd SymbioticRobots/jackal_ws
-catkin_init_workspace src/
-catkin_make
-```
-
-### 2. Launch Simulation
-
-```bash
-source devel/setup.bash
-roslaunch aws_robomaker_small_warehouse_world view_small_warehouse.launch
-```
-
-... [other commands]
-
-### 3. Linux Setup Installation
-
-#### Requirements
-
-- [Ubuntu 18.04](https://releases.ubuntu.com/18.04/) or its [wsl](https://ubuntu.com/tutorials/install-ubuntu-on-wsl2-on-windows-10#1-overview)
-- [ROS melodic](https://wiki.ros.org/melodic/Installation/Ubuntu) 
-
-... [other installation steps]
-
-### 4. Unity Installation
-
-... [Unity installation steps]
-
-## Additional Repositories
-
-- **Jackal_cam_lasers**: Contains the ROS workspace for the project. [Link to repository](https://github.com/oscell/Jackal_cam_lasers)
-- **Dissertation TEX Document**: The main document detailing the research, methodology, and findings. [Link to repository](https://github.com/oscell/MSc_HoloLens_Jackal_2391076) (private)
-
-## Acknowledgements
-
-This project was developed as part of a dissertation. Special thanks to all contributors and advisors.
-
----
-
-This enhanced README provides a clearer structure and a brief overview of the project right at the beginning. It's always a good idea to keep the README concise and to the point, directing users to other documents or links for detailed information.
-
-
-# SymbioticRobots
-
-
-## Overview
-
-This project uses the [HoloLens 2](https://learn.microsoft.com/en-us/hololens/hololens-commercial-features), the [realsense camera](https://github.com/IntelRealSense/realsense-ros/tree/ros1-legacy) and built-in [clearpath jackal](https://www.clearpathrobotics.com/assets/guides/kinetic/jackal/navigation.html) laser to build an app for teleoperation. Start with the [Installation](https://github.com/oscell/SymbioticRobots#installation), then go to Launch simulation.
-
-## Prepare the workspace
-
-Clone: 
-
-```bash
-git clone https://github.com/oscell/SymbioticRobots.git
-```
-
-Open the subsystem:
-
-```bash
-ubuntu1804
-```
-
-Go to workspace
-
-```bash
-cd SymbioticRobots/jackal_ws
-```
-
-Initiate the workspace:
-
-```bash
-catkin_init_workspace src/
-catkin_make
-```
-## Launch simulation
-
-```bash
-source devel/setup.bash
-roslaunch aws_robomaker_small_warehouse_world view_small_warehouse.launch
-```
-
-```bash
-source devel/setup.bash
-roslaunch jackal_gazebo spawn_jackal.launch config:=cam_laser
-```
-
-```bash
-rviz rviz
-=======
-roslaunch jackal_navigation amcl_demo.launch
-```
-
-```bash
-roslaunch jackal_navigation odom_navigation_demo.launch
-```
-
-```bash
-ifconfig
-```
-
-#### VM using hotspot
-```bash
-source ~/Desktop/SymbioticRobots/Jackal_ws/devel/setup.bash
-roslaunch ros_tcp_endpoint endpoint.launch tcp_ip:=192.168.86.39 tcp_port:=10000
-```
-
-
-```bash
-roslaunch ros_tcp_endpoint endpoint.launch tcp_ip:=127.0.0.1 tcp_port:=10000
-```
-
-# Installation
-
-## Linux setup Installation
+This section explains the steps in setting up the Unity environment. Before doing this howver the [Jackal_cam_lasers](https://github.com/oscell/Jackal_cam_lasers) must be set up.
 
 ### Requirements
-
-- [Ubuntu 18.04](https://releases.ubuntu.com/18.04/) or its [wsl](https://ubuntu.com/tutorials/install-ubuntu-on-wsl2-on-windows-10#1-overview)
-- [ROS melodic](https://wiki.ros.org/melodic/Installation/Ubuntu) 
-
-> Note you might want to source your workspace from `.bashrc`
-
-```bash
-
-echo "source /opt/ros/melodic/setup.bash" >> ~/.bashrc
-source ~/.bashrc
-```
-
-### Install jackal packages
-source ~/Desktop/SymbioticRobots/Jackal_ws/devel/setup.bash
-rosrun utils base_link_listener.py
-```
-
-
-```bash
-sudo apt-get install ros-melodic-jackal-simulator ros-melodic-jackal-desktop ros-melodic-jackal-navigation -y
-```
-
-### Install Realsense packages
-
-```bash
-sudo apt-get install ros-melodic-realsense2-camera
-```
-
 ## Unity Installation
 
 ### Unity Hub
 
 To [Install Unity](https://unity.com/download) we will first install [Unity Hub](https://docs.unity3d.com/hub/manual/InstallHub.html#install-hub-linux):
 
-1. To add the public signing key, run the following command:
-    
-    ```
-    wget -qO - https://hub.unity3d.com/linux/keys/public | gpg --dearmor | sudo tee /usr/share/keyrings/Unity_Technologies_ApS.gpg > /dev/null
-    
-    ```
-    
-2. To add the Unity Hub repository, you need an entry in `/etc/apt/sources.list.d`. Run the following command to add the Unity Hub repository:
-    
-    ```
-    sudo sh -c 'echo "deb [signed-by=/usr/share/keyrings/Unity_Technologies_ApS.gpg] https://hub.unity3d.com/linux/repos/deb stable main" > /etc/apt/sources.list.d/unityhub.list'
-    
-    ```
-    
-3. Update the package cache and install the package:
-    
-    ```
-    sudo apt update
-    sudo apt-get install unityhub
-    ```
-    
-    **Uninstall with: `sudo apt-get remove unityhub` .**
-    
-
 ### Unity editor
 
 We will install Unity 2020.3.2f1, although it is not explicitly mentioned, it [can work on Ubuntu 16.04](https://docs.unity3d.com/2020.1/Documentation/Manual/system-requirements.html).
 
 Once logged into Unity Hub open `Install editor > 2020.3.48f1 LTS.`
+
+## Setting up the project
+1. Create a **New Project** using the **3D core template** unity 2020.3.48f1.
+2. Switch build platform
+    1. file > Build Settings
+        
+        ![Untitled](assets\Images\buildSettings.png)
+3. Use [Mixed Reality Feature Tool](https://www.microsoft.com/en-us/download/details.aspx?id=102778)
+    1. Open the MixedRealityFeatureTool.exe and select he folder containing your project.
+
+    2. Install the following:
+        - Mixed Reality Toolkit Foundations
+        - Mixed Reality OpenXR Plugin
+    3. Go back to the project, It should prompt you to **RESTART,** this should then open **the MRTK setup** if not then ***Mixed Reality > Toolkit > Utilities > configure Project for MRTK***
+    4. Select **Unity OpenXR plugin**
+    5. Select **Show XR Plug-In Management Settings**
+    6. Ensure that **Initialize XR on Startup** is selected, and then, under **Plugin Providers**, click **Open XR**.
+        1. Select Microsoft feature group in the dropdown that appears
 
 
 ### Installing the Unity Robotics packages
@@ -223,101 +73,56 @@ This page provides brief instructions on installing the Unity Robotics packages.
     2. For the [URDF-Importer](https://github.com/Unity-Technologies/URDF-Importer), enter `https://github.com/Unity-Technologies/URDF-Importer.git?path=/com.unity.robotics.urdf-importer`.
 5. Click `Add`.
 
+### Install custom package
+Assets > Import package > Custom package.
+
+In the [UnityPackage](https://github.com/oscell/SymbioticRobots/tree/clean/UnityPackage) repository the Jackal_holoLens2 and MRTK profile can be found. This should be improted into your unity project.
+
 To install from a local clone of the repository, see [installing a local package](https://docs.unity3d.com/Manual/upm-ui-local.html) in the Unity manual.
 
-## Install Jackal
-### Kinetic
+### Build
+1. Open Scene: Original:
+    1. Set gizmos to 0
+    2. File > Build > Add Open Scenes
+    3. Build
+
+
+2. Configure Visual Studio 2022 for HoloLens
+    1. Select the **Master** or **Release** configuration, the **ARM64** architecture and **Remote Machine**
+    2. **Project > Properties** select 
+        1. **Configuration Properties > Debugging**.
+        2. Click the **Debugger to launch** drop down and then select **Remote Machine**
+        3. Set the IP to the Ethernet IP in **Settings>Update & Security > For developers**
+3. Debug > Run without Debugging
+
+## Acknowledgements
+
+This project was developed as part of a dissertation. Special thanks to all contributors and advisors.
+## Launch simulation
 
 ```bash
-sudo apt-get install ros-kinetic-jackal-simulator ros-kinetic-jackal-desktop ros-kinetic-jackal-navigation
-```
-### Melodic
-```bash
-sudo apt-get install ros-melodic-jackal-simulator ros-melodic-jackal-desktop ros-melodic-jackal-navigation
-```
-
-
-
-<!-- # SymbioticRobots
-
-### SimulationSteps
-
-```bash
-cd SymbioticRobots/Jackal_ws
-```
-
-```bash
-catkin_make
+source devel/setup.bash
+roslaunch aws_robomaker_small_warehouse_world view_small_warehouse.launch
 ```
 
 ```bash
 source devel/setup.bash
-```
-
-Launch rviz
-
-```bash
-roslaunch jackal_gazebo jackal_world.launch config:=front_laser
-```
-
-#### Mapping
-```bash
-roslaunch jackal_navigation gmapping_demo.launch
-```
-
-
-```bash
-roslaunch jackal_viz view_robot.launch config:=gmapping
-```
-#### With a map
-```bash
-roslaunch jackal_navigation amcl_demo.launch map_file:=/home/oscar/Desktop/SymbioticRobots/assets/full_map.yml
+roslaunch jackal_gazebo spawn_jackal.launch config:=cam_laser
 ```
 
 ```bash
-roslaunch jackal_viz view_robot.launch config:=localization
+roslaunch jackal_navigation odom_navigation_demo.launch
 ```
-#### Ros TCP connection
+
+
+
+#### Networking
 
 ```bash
-roslaunch ros_tcp_endpoint endpoint.launch tcp_ip:=127.0.0.1 tcp_port:=10000
-```
-
-Open Robotics/ROS Settings from the Unity menu bar, and set the ROS IP Address variable to the IP you set
-
-
-```bash
-cd ~/Desktop/Github/SymbioticRobots/assets/
-rosrun testing map_maker.py
-```
-
-************************Save the map************************
-
-```bash
-cd ~/Desktop/Github/SymbioticRobots/assets
-rosrun map_server map_saver -f mymap1
-```
-
-****************************Convert to png****************************
-
-```jsx
-cd ../usefulscripits
-python pgm_to_png.py
-```
-
-
-
-## Linux setup Installation
-```
-sudo apt install git-all -y
+ifconfig
 ```
 
 ```bash
-git clone https://github.com/oscell/SymbioticRobots.git
-cd SymbioticRobots
+source ~/Desktop/SymbioticRobots/Jackal_ws/devel/setup.bash
+roslaunch ros_tcp_endpoint endpoint.launch tcp_ip:={YOUR IP GOES HERE} tcp_port:=10000
 ```
-
-```bash
-chmod +x requirements.txt
-./requirements.txt
-``` -->
