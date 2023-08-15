@@ -94,10 +94,6 @@ To install from a local clone of the repository, see [installing a local packag
         2. Click the **Debugger to launch** drop down and then select **Remote Machine**
         3. Set the IP to the Ethernet IP in **Settings>Update & Security > For developers**
 3. Debug > Run without Debugging
-
-## Acknowledgements
-
-This project was developed as part of a dissertation. Special thanks to all contributors and advisors.
 ## Launch simulation
 
 **Terminal 1: Launch World**
@@ -135,3 +131,7 @@ ifconfig
 source ~/Desktop/SymbioticRobots/Jackal_ws/devel/setup.bash
 roslaunch ros_tcp_endpoint endpoint.launch tcp_ip:={YOUR IP GOES HERE} tcp_port:=10000
 ```
+
+## Acknowledgements
+
+This project was developed as part of a dissertation. Special thanks to all contributors and advisors.
