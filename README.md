@@ -16,7 +16,10 @@ This project outlines the steps to building an application for the [HoloLens 2](
 | <img src="assets/Images/Unity/Unity_scene_lag.png" width="400"> | <img src="assets/Images/Unity/UnityEnvironment.png" width="400"> |
 
 
-<img src="assets/Images/UI/UI in environment.png" width="200"> 
+<p align="center">
+  <img src="assets/Images/UI/UI in environment.png" width="200">
+</p>
+
 
 ## Repository Contents
 
