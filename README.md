@@ -22,7 +22,6 @@ This project outlines the steps to building an application for the [HoloLens 2](
 ## Setup & Installation
 Unity This section explains the steps in setting up the Unity environment. Before doing this howver the [Jackal_cam_lasers](https://github.com/oscell/Jackal_cam_lasers) must be set up.
 
-
 Clone:
 ```
 git clone --recurse-submodules https://github.com/oscell/SymbioticRobots.git
