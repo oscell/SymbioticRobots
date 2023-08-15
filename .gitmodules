@@ -2,4 +2,6 @@
 	path = Jackal_cam_lasers
 	url = https://github.com/oscell/Jackal_cam_lasers.git
 
-
+[submodule "Diss/aMSc_HoloLens_Jackal_2391076"]
+	path = MSc_HoloLens_Jackal_2391076
+	url = https://github.com/oscell/MSc_HoloLens_Jackal_2391076.git
