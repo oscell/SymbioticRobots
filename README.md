@@ -11,7 +11,11 @@ For a detailed overview, refer to the [dissertation document](https://github.com
 This project outlines the steps to building an application for the [HoloLens 2](https://learn.microsoft.com/en-us/hololens/hololens-commercial-features) that is used to interact with the DT in the ROS workspace. This is constructed using the [realsense camera](https://github.com/IntelRealSense/realsense-ros/tree/ros1-legacy) and the [clearpath jackal](https://www.clearpathrobotics.com/assets/guides/kinetic/jackal/navigation.html).
 
 ## Video
-[![Watch the video](https://github.com/oscell/SymbioticRobots/blob/main/assets/Images/UI/UI%20in%20environment.png)](https://www.youtube.com/watch?v=wfG_v4nsM7Y)
+<p align="center">
+  <a href="https://www.youtube.com/watch?v=wfG_v4nsM7Y">
+    <img src="https://github.com/oscell/SymbioticRobots/blob/main/assets/Images/UI/UI%20in%20environment.png" width="300">
+  </a>
+</p>
 
 ## Preview
 | Unity Sceen | Development |
