@@ -13,12 +13,7 @@ This project outlines the steps to building an application for the [HoloLens 2](
 
 ## Video
 
-<p align="left">
-  <a href="https://www.youtube.com/watch?v=wfG_v4nsM7Y">
-    <img src="https://github.com/oscell/SymbioticRobots/blob/main/assets/Images/UI/UI%20in%20environment_play.png" width="300">
-  </a>
-</p>
-
+[![Video](assets/Images/UI/UI_in_environment_play.png)](https://youtu.be/MjU5PTl1hEw)
 ## Preview
 
 | Unity Sceen | Development |
