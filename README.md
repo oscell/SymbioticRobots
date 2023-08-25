@@ -162,4 +162,4 @@ roslaunch ros_tcp_endpoint endpoint.launch tcp_ip:={YOUR IP GOES HERE} tcp_port:
 
 ## Acknowledgements
 
-This project was developed as part of a dissertation. Special thanks to all contributors and advisors.
+This project was developed as part of a dissertation. Special thanks to my project director, professor David Flynn and project Supervisor, Daniel Mitchel.
