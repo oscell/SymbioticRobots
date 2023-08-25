@@ -11,9 +11,9 @@ For a detailed overview, refer to the [dissertation document](https://github.com
 
 This project outlines the steps to building an application for the [HoloLens 2](https://learn.microsoft.com/en-us/hololens/hololens-commercial-features) that is used to interact with the DT in the ROS workspace. This is constructed using the [realsense camera](https://github.com/IntelRealSense/realsense-ros/tree/ros1-legacy) and the [clearpath jackal](https://www.clearpathrobotics.com/assets/guides/kinetic/jackal/navigation.html).
 
-### Videos
+:movie_camera: Click on the videos below to find out more. :movie_camera:
 
-| Group Video | AR Robotics |
+| Group Video | Project Video |
 |:-----------:|:-----------:|
 | <a href="https://youtu.be/MjU5PTl1hEw"><img src="assets/Images/Thumbnails/Team_Thumbnail.png" width="300"></a>  | <a href="https://youtu.be/OVepy4K4ag0?si=QkeTbYrNz_GrUCbJ"><img src="assets/Images/Thumbnails/Project Thumbail.png" width="300"></a> |
 
