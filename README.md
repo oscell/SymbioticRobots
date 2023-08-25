@@ -149,7 +149,7 @@ rosrun rviz rviz -d ~/Jackal_cam_lasers/rviz/holo.rviz
 ifconfig
 ```
 
-#### Networking
+**Terminal 6: Networking**
 
 ```bash
 ifconfig
