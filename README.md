@@ -15,7 +15,7 @@ This project outlines the steps to building an application for the [HoloLens 2](
 
 | Group Video | AR Robotics |
 |:-----------:|:-----------:|
-| <a href="https://youtu.be/MjU5PTl1hEw"><img src="assets/Images/Thumbnails/Team_Thumbnail.png" width="300"></a>  | <a href="https://youtu.be/MjU5PTl1hEw"><img src="assets/Images/Thumbnails/Project Thumbail.png" width="300"></a> |
+| <a href="https://youtu.be/MjU5PTl1hEw"><img src="assets/Images/Thumbnails/Team_Thumbnail.png" width="300"></a>  | <a href="https://youtu.be/OVepy4K4ag0?si=QkeTbYrNz_GrUCbJ"><img src="assets/Images/Thumbnails/Project Thumbail.png" width="300"></a> |
 
 
 ## Repository Contents
